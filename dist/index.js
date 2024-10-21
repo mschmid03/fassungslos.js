@@ -1,3 +1,4 @@
+"use strict";
 (() => {
   // sliderListener.ts
   function setSliderListener(sliderNav2, sliderContentItems2) {
@@ -56,3 +57,4 @@
   });
   centerSticky("sticky-wrapper-abstimmung");
 })();
+//# sourceMappingURL=index.js.map
