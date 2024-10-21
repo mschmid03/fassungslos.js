@@ -54,6 +54,7 @@
     );
     sliderContentItems.forEach((item) => {
       item.classList.remove("visible");
+      console.log(item.classList);
     });
     setSliderListener(sliderNav, sliderContentItems);
     document.addEventListener("resize", () => {

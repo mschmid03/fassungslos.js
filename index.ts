@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ) as NodeListOf<Element>;
   sliderContentItems.forEach((item) => {
     item.classList.remove("visible");
+    console.log(item.classList);
   });
 
   setSliderListener(sliderNav, sliderContentItems);
