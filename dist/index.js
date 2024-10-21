@@ -51,6 +51,9 @@
   var sliderContentItems = sliderContent?.querySelectorAll(
     ".linsenwelt-slider_content-item"
   );
+  sliderContentItems.forEach((item) => {
+    item.classList.remove("visible");
+  });
   setSliderListener(sliderNav, sliderContentItems);
   document.addEventListener("resize", () => {
     setSliderListener(sliderNav, sliderContentItems);
