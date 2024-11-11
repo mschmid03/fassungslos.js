@@ -1,13 +1,12 @@
+/* index.scss */
 @media (min-width: 1200px) {
   .partner_container {
     grid-template-columns: repeat(4, minmax(50px, 1fr));
   }
 }
-
 @media (min-width: 1200px) {
   .sortiment-cards_container {
     grid-template-columns: repeat(2, minmax(50px, 1fr));
   }
 }
-/**/
 /*# sourceMappingURL=index.css.map */
