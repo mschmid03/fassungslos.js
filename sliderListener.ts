@@ -4,7 +4,7 @@ export function setSliderListener(
 ) {
   const sliderItems = sliderNav?.querySelectorAll(".linsenwelt-slider_item");
   sliderItems?.forEach((item, i) => {
-    const itemWidth = item.scrollWidth;
+    let itemWidth = item.scrollWidth;
     const itemClone = item.cloneNode(true) as Element;
     const itemElement = item.parentNode?.replaceChild(itemClone, item);
 
@@ -16,6 +16,7 @@ export function setSliderListener(
         if (sliderNav) {
           sliderNav.style.transform = `translateX(calc((${i} * (-${itemWidth}px - 1.25rem)`;
           document.addEventListener("resize", () => {
+            itemWidth = itemClone.scrollWidth;
             sliderNav.style.transform = `translateX(calc((${i} * (-${itemWidth}px - 1.25rem)`;
           });
 
