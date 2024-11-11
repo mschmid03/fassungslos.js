@@ -16,5 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("resize", () => {
     setSliderListener(sliderNav, sliderContentItems);
   });
-  centerSticky("sticky-wrapper-abstimmung");
+  if (document.documentElement.clientWidth > 991) {
+    centerSticky("sticky-wrapper-abstimmung");
+  }
 });
