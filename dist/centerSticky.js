@@ -2,13 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.centerSticky = centerSticky;
 function centerSticky(id) {
-    var stickyDiv = document.getElementById(id);
-    var height = stickyDiv.offsetHeight;
-    stickyDiv.style.marginTop = "".concat(height / 2, "px");
-    stickyDiv.style.marginBottom = "-".concat(height / 2, "px");
-    window.addEventListener("resize", function () {
+    const stickyDiv = document.getElementById(id);
+    let height = stickyDiv.offsetHeight;
+    stickyDiv.style.marginTop = `${height / 2}px`;
+    stickyDiv.style.marginBottom = `-${height / 2}px`;
+    window.addEventListener("resize", () => {
         height = stickyDiv.offsetHeight;
-        stickyDiv.style.marginTop = "".concat(height / 2, "px");
-        stickyDiv.style.marginBottom = "-".concat(height / 2, "px");
+        stickyDiv.style.marginTop = `${height / 2}px`;
+        stickyDiv.style.marginBottom = `-${height / 2}px`;
     });
 }
