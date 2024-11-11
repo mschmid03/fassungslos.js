@@ -6,17 +6,16 @@
     sliderItems?.forEach((item, i) => {
       const itemWidth = item.scrollWidth;
       const itemClone = item.cloneNode(true);
-      console.log(itemWidth);
-      console.log(itemClone);
       const itemElement = item.parentNode?.replaceChild(itemClone, item);
-      console.log(itemClone);
       itemClone?.addEventListener("click", () => {
         itemClone.classList.add("active");
-        console.log(itemElement);
         if (sliderContentItems) {
           sliderContentItems[i].classList.add("active");
           if (sliderNav) {
             sliderNav.style.transform = `translateX(calc((${i} * (-${itemWidth}px - 1.25rem)`;
+            document.addEventListener("resize", () => {
+              sliderNav.style.transform = `translateX(calc((${i} * (-${itemWidth}px - 1.25rem)`;
+            });
             const newSliderItems = sliderNav?.querySelectorAll(
               ".linsenwelt-slider_item"
             );
@@ -54,7 +53,6 @@
     );
     sliderContentItems.forEach((item) => {
       item.classList.remove("visible");
-      console.log(item.classList);
     });
     setSliderListener(sliderNav, sliderContentItems);
     document.addEventListener("resize", () => {
